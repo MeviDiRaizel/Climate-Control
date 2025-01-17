@@ -1,20 +1,24 @@
 {
   "name": "smart-climate-control",
+  "homepage": "https://MeviDiRaizel.github.io/Climate-Control",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@types/node": "^22.10.7",
     "chart.js": "^4.4.0",
-    "react-chartjs-2": "^5.2.0",
     "chartjs-adapter-date-fns": "^3.0.0",
-    "date-fns": "^2.30.0"
+    "date-fns": "^2.30.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

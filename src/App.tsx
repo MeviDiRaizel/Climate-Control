@@ -123,7 +123,11 @@ function App() {
       updateTemperatureHistory();
     }, 4000); // Update interval changed to 4000ms (4 seconds)
 
-    return () => clearInterval(intervalRef.current);
+    return () => {
+      if (intervalRef.current !== null) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, [insideTemp, desiredTemp, mode, location, scheduledTemps, selectedRoom]);
 
   useEffect(() => {
