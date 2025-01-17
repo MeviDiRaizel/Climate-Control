@@ -308,12 +308,12 @@ function App() {
       },
       tooltip: {
         enabled: true,
-        mode: 'index',
+        mode: 'index' as const,
         intersect: false
       }
     },
     interaction: {
-      mode: 'nearest',
+      mode: 'nearest' as const,
       intersect: false
     }
   }), [roomData, selectedRoom, tempUnit, darkMode]);
@@ -525,7 +525,7 @@ function App() {
             <div className="lg:w-2/3 p-6 lg:p-8">
               <div className="space-y-6">
                 <div className={`rounded-xl p-4 ${darkMode ? 'bg-gray-700/50' : 'bg-gray-50'} h-[400px]`}>
-                  <Line data={chartData} options={chartOptions} />
+                  <Line data={chartData} options={chartOptions as any} />
                 </div>
 
                 <div className="rounded-xl p-4 bg-gray-50 dark:bg-gray-700/50">
